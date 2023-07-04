@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     float speed;
 
     [Header("KeyBinds")]
-    [SerializeField] KeyCode runKey = KeyCode.LeftShift;
+    public KeyCode runKey = KeyCode.LeftShift;
 
     float xInput, yInput;
     Rigidbody playerRb;
