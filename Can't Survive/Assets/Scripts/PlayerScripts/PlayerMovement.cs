@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] float walkSpeed;
     [SerializeField] float runSpeed;
-    [SerializeField] float itemWalkSpeed;
-    [SerializeField] float itemRunSpeed;
+    [SerializeField] float rifleWalkSpeed;
+    [SerializeField] float rifleRunSpeed;
+    [SerializeField] float pistolWalkSpeed;
+    [SerializeField] float pistolRunSpeed;
     [SerializeField] float rotationSpeed;
     [SerializeField] float jumpForce;
     [SerializeField] float groundDrag = 5f;
@@ -89,10 +91,15 @@ public class PlayerMovement : MonoBehaviour
 
     void ChangeSpeed()
     {
-        if(pickUp.hasItem)
+        if(pickUp.hasRifle && pickUp.hasItemInHand)
         {
-            if (Input.GetKey(runKey)) speed = itemRunSpeed;
-            else speed = itemWalkSpeed;
+            if (Input.GetKey(runKey)) speed = rifleRunSpeed;
+            else speed = rifleWalkSpeed;
+        }
+        else if(pickUp.hasPistol && pickUp.hasItemInHand)
+        {
+            if (Input.GetKey(runKey)) speed = pistolRunSpeed;
+            else speed = pistolWalkSpeed;
         }
         else
         {
