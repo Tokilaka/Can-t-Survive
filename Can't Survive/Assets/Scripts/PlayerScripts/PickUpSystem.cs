@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+//THIS CODE IS FOR TESTING AND WILL NOT BE USED FOR INVENTORY SYSTEM!!!
+
 public class PickUpSystem : MonoBehaviour
 {
     [SerializeField] GameObject hand;

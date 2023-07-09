@@ -50,23 +50,19 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
+        //get inputs
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
 
         ChangeSpeed();
-
-        //move player
+        //get dir
         Vector3 movement = new (xInput, 0, yInput);
         movement.Normalize();
 
-        if (IsGrounded())
-        {
-            playerRb.AddForce(500f * speed * Time.fixedDeltaTime * movement, ForceMode.Force);
-        }
-        else
-        {
-            playerRb.AddForce(500f * airMultiplier * speed * Time.fixedDeltaTime * movement, ForceMode.Force);
-        }
+        //move player
+        if (IsGrounded()) playerRb.AddForce(500f * speed * Time.fixedDeltaTime * movement, ForceMode.Force);
+        else playerRb.AddForce(500f * airMultiplier * speed * Time.fixedDeltaTime * movement, ForceMode.Force);
+
 
         //rotate player when moving
         if (movement != Vector3.zero)
@@ -91,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ChangeSpeed()
     {
+        //changes speed based on weapon holding in hand
         if(pickUp.hasRifle && pickUp.hasItemInHand)
         {
             if (Input.GetKey(runKey)) speed = rifleRunSpeed;
@@ -108,9 +105,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - rayDistance, transform.position.z));
-    }
+    //debuger for ground check
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - rayDistance, transform.position.z));
+    //}
 }
