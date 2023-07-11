@@ -4,59 +4,59 @@ using UnityEngine;
 
 public class Buoyancy : MonoBehaviour
 {
-    [SerializeField] Transform[] floaters;
-    [SerializeField] float underWaterDrag = 3f;
-    [SerializeField] float underWaterAngularDrag = 1f;
-    [SerializeField] float airDrag = 0f;
-    [SerializeField] float airAngularDrag = 0.05f;
-    [SerializeField] float floatingPower = 50f;
-    [SerializeField] Transform waterHeight;
+    [SerializeField] Transform[] Floaters;
+    [SerializeField] float UnderWaterDrag = 3f;
+    [SerializeField] float UnderWaterAngularDrag = 1f;
+    [SerializeField] float AirDrag = 0f;
+    [SerializeField] float AirAngularDrag = 0.05f;
+    [SerializeField] float FloatingPower = 15f;
 
-    Rigidbody rb;
-    bool underWater;
-    int floatersUnderWater;
+    WaterManager Water;
+    Rigidbody Rb;
+    bool Underwater;
+    int FloatersUnderWater;
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Rb = this.GetComponent<Rigidbody>();
+        Water = FindObjectOfType<WaterManager>();
     }
 
+    // Update is called once per frame
     void FixedUpdate()
     {
-        floatersUnderWater = 0;
-        for (int i = 0; i < floaters.Length; i++)
+        FloatersUnderWater = 0;
+        for (int i = 0; i < Floaters.Length; i++)
         {
-            float difference = floaters[i].position.y - waterHeight.position.y;
-            if (difference < 0)
+            float diff = Floaters[i].position.y - Water.WaterAtHeightPosition(Floaters[i].position);
+            if (diff < 0)
             {
-                rb.AddForceAtPosition(floatingPower * Mathf.Abs(difference) * Vector3.up, floaters[i].position, ForceMode.Force);
-                floatersUnderWater++;
-
-                if (!underWater)
+                Rb.AddForceAtPosition(Vector3.up * FloatingPower * Mathf.Abs(diff), Floaters[i].position, ForceMode.Force);
+                FloatersUnderWater += 1;
+                if (!Underwater)
                 {
-                    underWater = true;
+                    Underwater = true;
                     SwitchState(true);
                 }
             }
         }
-
-        if (underWater && floatersUnderWater == 0)
+        if (Underwater && FloatersUnderWater == 0)
         {
-            underWater = false;
+            Underwater = false;
             SwitchState(false);
         }
     }
-
-    void SwitchState(bool underWater)
+    void SwitchState(bool isUnderwater)
     {
-        if (underWater)
+        if (isUnderwater)
         {
-            rb.drag = underWaterDrag;
-            rb.angularDrag = underWaterAngularDrag;
+            Rb.drag = UnderWaterDrag;
+            Rb.angularDrag = UnderWaterAngularDrag;
         }
         else
         {
-            rb.drag = airDrag;
-            rb.angularDrag = airAngularDrag;
+            Rb.drag = AirDrag;
+            Rb.angularDrag = AirAngularDrag;
         }
     }
 }

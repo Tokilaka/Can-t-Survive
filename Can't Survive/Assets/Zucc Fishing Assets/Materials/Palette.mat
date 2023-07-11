@@ -1,0 +1,337 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Palette
+  m_Shader: {fileID: -6465566751694194690, guid: 85c97977ab2d22647b875903b3d86cb5,
+    type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Gradient_Enabled_C1: 0
+    - _Gradient_Enabled_C10: 0
+    - _Gradient_Enabled_C11: 0
+    - _Gradient_Enabled_C12: 0
+    - _Gradient_Enabled_C13: 0
+    - _Gradient_Enabled_C14: 0
+    - _Gradient_Enabled_C15: 0
+    - _Gradient_Enabled_C16: 0
+    - _Gradient_Enabled_C2: 1
+    - _Gradient_Enabled_C3: 0
+    - _Gradient_Enabled_C4: 0
+    - _Gradient_Enabled_C5: 1
+    - _Gradient_Enabled_C6: 0
+    - _Gradient_Enabled_C7: 0
+    - _Gradient_Enabled_C8: 0
+    - _Gradient_Enabled_C9: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Outline_Enabled_C1: 1
+    - _Outline_Enabled_C10: 0
+    - _Outline_Enabled_C11: 0
+    - _Outline_Enabled_C12: 0
+    - _Outline_Enabled_C13: 0
+    - _Outline_Enabled_C14: 0
+    - _Outline_Enabled_C15: 0
+    - _Outline_Enabled_C16: 0
+    - _Outline_Enabled_C2: 1
+    - _Outline_Enabled_C3: 1
+    - _Outline_Enabled_C4: 1
+    - _Outline_Enabled_C5: 1
+    - _Outline_Enabled_C6: 1
+    - _Outline_Enabled_C7: 1
+    - _Outline_Enabled_C8: 1
+    - _Outline_Enabled_C9: 1
+    - _Parallax: 0.02
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _UVSec: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _Base_C1: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C10: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C11: {r: 0.75, g: 1, b: 0.9970588, a: 0}
+    - _Base_C12: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C13: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C14: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C15: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C16: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C2: {r: 1, g: 0, b: 0, a: 0}
+    - _Base_C3: {r: 1, g: 0.6984031, b: 0.48584908, a: 0}
+    - _Base_C4: {r: 1, g: 0.628201, b: 0.48584908, a: 0}
+    - _Base_C5: {r: 0, g: 1, b: 1, a: 1}
+    - _Base_C6: {r: 1, g: 1, b: 1, a: 0}
+    - _Base_C7: {r: 0, g: 1, b: 0, a: 0}
+    - _Base_C8: {r: 1, g: 0, b: 0, a: 0}
+    - _Base_C9: {r: 0.4666667, g: 0.16862746, b: 0.06666667, a: 0}
+    - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Gradient_C1: {r: 0.7019608, g: 0.9607844, b: 1, a: 0}
+    - _Gradient_C10: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C11: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C12: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C13: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C14: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C15: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C16: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C2: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C3: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C4: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C5: {r: 0, g: 0.2463131, b: 1, a: 0}
+    - _Gradient_C6: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C7: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C8: {r: 0.01, g: 0.01, b: 0.01, a: 0}
+    - _Gradient_C9: {r: 0.103773594, g: 0, b: 0.011403679, a: 0}
+    - _Gradient_PSS_C1: {r: 0.4915, g: 0.527, b: 0.5, a: 0}
+    - _Gradient_PSS_C10: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C11: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C12: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C13: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C14: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C15: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C16: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C2: {r: 0.47100002, g: 0.518, b: 0.5, a: 0}
+    - _Gradient_PSS_C3: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C4: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C5: {r: 0.5, g: 0.53, b: 0.5, a: 0}
+    - _Gradient_PSS_C6: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C7: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C8: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Gradient_PSS_C9: {r: 0.4915, g: 0.54, b: 0.5, a: 0}
+    - _HSV_C1: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C10: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C11: {r: 0, g: 1, b: 1, a: 0}
+    - _HSV_C12: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C13: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C14: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C15: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C16: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C2: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C3: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C4: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C5: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C6: {r: 0, g: 0.5, b: 0.5, a: 0}
+    - _HSV_C7: {r: 0, g: 1, b: 1, a: 0}
+    - _HSV_C8: {r: 0, g: 1, b: 1, a: 0}
+    - _HSV_C9: {r: 0, g: 0.5, b: 1, a: 0}
+    - _Lighting_Ramp_C1: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C10: {r: 1, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C11: {r: 0, g: 0, b: 0, a: 0}
+    - _Lighting_Ramp_C12: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C13: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C14: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C15: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C16: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C2: {r: 0, g: 0.38969663, b: 0, a: 0}
+    - _Lighting_Ramp_C3: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C4: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C5: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C6: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C7: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C8: {r: 0, g: 1, b: 0, a: 0}
+    - _Lighting_Ramp_C9: {r: 1, g: 1, b: 0, a: 0}
+    - _Outline_C1: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C10: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C11: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C12: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C13: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C14: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C15: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C16: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C2: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C3: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C4: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C5: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C6: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C7: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C8: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_C9: {r: 0, g: 0, b: 0, a: 0}
+    - _Outline_TD_C1: {r: 0.5, g: 0.321, b: 0, a: 0}
+    - _Outline_TD_C10: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C11: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C12: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C13: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C14: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C15: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C16: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C2: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C3: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C4: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C5: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C6: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C7: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C8: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Outline_TD_C9: {r: 0.5, g: 0.25, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C1: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C10: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C11: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C12: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C13: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C14: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C15: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C16: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C2: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C3: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C4: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C5: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C6: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C7: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C8: {r: 0, g: 1, b: 0, a: 0}
+    - _Rim_Ramp_and_Strength_C9: {r: 0.2513014, g: 0.26404592, b: 1, a: 0}
+    - _Shadow_C1: {r: 1, g: 0.7688679, b: 0.9237077, a: 0}
+    - _Shadow_C10: {r: 0, g: 1, b: 1, a: 0}
+    - _Shadow_C11: {r: 0, g: 1, b: 0.9889562, a: 0}
+    - _Shadow_C12: {r: 0.65999997, g: 0.65999997, b: 0.65999997, a: 0}
+    - _Shadow_C13: {r: 0.65999997, g: 0.65999997, b: 0.65999997, a: 0}
+    - _Shadow_C14: {r: 0.65999997, g: 0.65999997, b: 0.65999997, a: 0}
+    - _Shadow_C15: {r: 0.65999997, g: 0.65999997, b: 0.65999997, a: 0}
+    - _Shadow_C16: {r: 0.65999997, g: 0.65999997, b: 0.65999997, a: 0}
+    - _Shadow_C2: {r: 0.509434, g: 0, b: 0, a: 0}
+    - _Shadow_C3: {r: 0.8773585, g: 0.4768042, b: 0.19450872, a: 0}
+    - _Shadow_C4: {r: 1, g: 0.33490568, b: 0.5780405, a: 0}
+    - _Shadow_C5: {r: 0, g: 1, b: 1, a: 1}
+    - _Shadow_C6: {r: 0.6839622, g: 0.93954396, b: 1, a: 0}
+    - _Shadow_C7: {r: 0, g: 1, b: 0, a: 0}
+    - _Shadow_C8: {r: 1, g: 0, b: 0, a: 0}
+    - _Shadow_C9: {r: 0.37254903, g: 0.1254902, b: 0.058823533, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Specular_C1: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C10: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C11: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C12: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C13: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C14: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C15: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C16: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C2: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C3: {r: 1, g: 0.8253277, b: 0.7028302, a: 0}
+    - _Specular_C4: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C5: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C6: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C7: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C8: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_C9: {r: 0.5377358, g: 0.26747534, b: 0.17501779, a: 0}
+    - _Specular_Ramp_and_Strength_C1: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C10: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C11: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C12: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C13: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C14: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C15: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C16: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C2: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C3: {r: 1, g: 1, b: 0.88, a: 0}
+    - _Specular_Ramp_and_Strength_C4: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C5: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C6: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C7: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C8: {r: 1, g: 1, b: 0, a: 0}
+    - _Specular_Ramp_and_Strength_C9: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1622156697843913103
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

@@ -109,8 +109,8 @@ Material:
     - _rippleDensity: 7
     - _rippleSlimness: 7
     - _rippleSpeed: 1
-    - _waveDistance: 1
-    - _waveHeight: 3
+    - _waveDistance: 2
+    - _waveHeight: 1
     - _waveSpeed: 0.2
     m_Colors:
     - _BaseColor: {r: 0, g: 0.5048921, b: 1, a: 1}
