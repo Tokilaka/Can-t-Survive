@@ -11,24 +11,22 @@ public class Buoyancy : MonoBehaviour
     [SerializeField] float AirAngularDrag = 0.05f;
     [SerializeField] float FloatingPower = 15f;
 
-    WaterManager Water;
+    WaterManager waterManager;
     Rigidbody Rb;
     bool Underwater;
     int FloatersUnderWater;
-    // Start is called before the first frame update
     void Start()
     {
         Rb = this.GetComponent<Rigidbody>();
-        Water = FindObjectOfType<WaterManager>();
+        waterManager = FindObjectOfType<WaterManager>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         FloatersUnderWater = 0;
         for (int i = 0; i < Floaters.Length; i++)
         {
-            float diff = Floaters[i].position.y - Water.WaterAtHeightPosition(Floaters[i].position);
+            float diff = Floaters[i].position.y - waterManager.WaterAtHeightPosition(Floaters[i].position);
             if (diff < 0)
             {
                 Rb.AddForceAtPosition(Vector3.up * FloatingPower * Mathf.Abs(diff), Floaters[i].position, ForceMode.Force);

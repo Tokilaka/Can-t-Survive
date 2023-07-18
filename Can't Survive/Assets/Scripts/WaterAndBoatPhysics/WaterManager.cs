@@ -5,13 +5,13 @@ using static UnityEditor.PlayerSettings;
 
 public class WaterManager : MonoBehaviour
 {
-    [SerializeField] float waveHeight = 1.0f;
-    [SerializeField] float waveFrequency = 2.1111f;
-    [SerializeField] float waveSpeed = 0.5f;
+    [SerializeField] float waveFrequency = 1f;
+    [SerializeField] float waveHeight = 4f;
+    [SerializeField] float waveSpeed = 2f;
     [SerializeField] Transform water;
 
-    Material waterMaterial;
-    Texture2D waterTexture;
+    Material waterMat;
+    Texture2D waveDisplacement;
 
     private void Start()
     {
@@ -20,27 +20,28 @@ public class WaterManager : MonoBehaviour
 
     void SetVariables()
     {
-        waterMaterial = water.GetComponent<Renderer>().sharedMaterial;
-        waterTexture = (Texture2D)waterMaterial.GetTexture("_WavesDisplacement");
+        waterMat = water.GetComponent<Renderer>().sharedMaterial;
+        waveDisplacement = (Texture2D)waterMat.GetTexture("_WaveDisplacement");
     }
 
     public float WaterAtHeightPosition(Vector3 position)
     {
-        return water.position.y + waterTexture.GetPixelBilinear(position.x * waveFrequency * water.localScale.x, (position.z * waveFrequency + Time.time * waveSpeed) * water.localScale.z).g * waveHeight;
+        return water.position.y + waveDisplacement.GetPixelBilinear(position.x * (waveFrequency/10) * water.localScale.x, (position.z * (waveFrequency/10) + Time.time * (waveSpeed/10)) * water.localScale.z).g * waveHeight;
     }
 
 
     private void OnValidate()
     {
-        if (!waterMaterial)
+        if(!waterMat)
             SetVariables();
+
         UpdateMaterial();
     }
 
     void UpdateMaterial()
     {
-        waterMaterial.SetFloat("_Waves_Height", waveHeight);
-        waterMaterial.SetFloat("_Waves_Speed", waveSpeed);
-        waterMaterial.SetFloat("_WavesFrequency", waveFrequency);
+        waterMat.SetFloat("_Waves_Speed", waveSpeed/10);
+        waterMat.SetFloat("_WavesFrequency", waveFrequency/10);
+        waterMat.SetFloat("_WavesHeight", waveHeight);
     }
 }
