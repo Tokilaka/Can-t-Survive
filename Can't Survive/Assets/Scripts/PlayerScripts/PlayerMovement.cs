@@ -7,10 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] float walkSpeed;
     [SerializeField] float runSpeed;
-    [SerializeField] float rifleWalkSpeed;
-    [SerializeField] float rifleRunSpeed;
-    [SerializeField] float pistolWalkSpeed;
-    [SerializeField] float pistolRunSpeed;
     [SerializeField] float rotationSpeed;
     [SerializeField] float jumpForce;
     [SerializeField] float groundDrag = 5f;
@@ -27,12 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
     float xInput, yInput;
     Rigidbody playerRb;
-    PickUpSystem pickUp;
 
     private void Awake()
     {
         playerRb = GetComponent<Rigidbody>();
-        pickUp = GetComponent<PickUpSystem>();
     }
 
     void Update()
@@ -87,22 +81,8 @@ public class PlayerMovement : MonoBehaviour
 
     void ChangeSpeed()
     {
-        //changes speed based on weapon holding in hand
-        if(pickUp.hasRifle && pickUp.hasItemInHand)
-        {
-            if (Input.GetKey(runKey)) speed = rifleRunSpeed;
-            else speed = rifleWalkSpeed;
-        }
-        else if(pickUp.hasPistol && pickUp.hasItemInHand)
-        {
-            if (Input.GetKey(runKey)) speed = pistolRunSpeed;
-            else speed = pistolWalkSpeed;
-        }
-        else
-        {
-            if (Input.GetKey(runKey)) speed = runSpeed;
-            else speed = walkSpeed;
-        }
+        if (Input.GetKey(runKey)) speed = runSpeed;
+        else speed = walkSpeed;
     }
 
     //debuger for ground check

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 464572}
   - component: {fileID: 3341540}
   - component: {fileID: 2399096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolSwat_Trigger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 428132}
   - component: {fileID: 3334304}
   - component: {fileID: 2319068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolSwat_Mag_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,9 +179,10 @@ GameObject:
   - component: {fileID: 2301690}
   - component: {fileID: 5832844066012058240}
   - component: {fileID: 548479293401341176}
-  m_Layer: 0
+  - component: {fileID: 1306390896359617187}
+  m_Layer: 8
   m_Name: SM_Wep_PistolSwat_01
-  m_TagString: Pistol
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,6 +285,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3f777331fd36fe041b12783f01892a1a, type: 3}
+--- !u!114 &1306390896359617187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc73676a358d384fa29a81e443789b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 3c9f6dee3c64cd6499019d20f71eba9e, type: 2}
 --- !u!1 &188506
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +309,7 @@ GameObject:
   - component: {fileID: 440784}
   - component: {fileID: 3321064}
   - component: {fileID: 2305736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolSwat_Slide_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

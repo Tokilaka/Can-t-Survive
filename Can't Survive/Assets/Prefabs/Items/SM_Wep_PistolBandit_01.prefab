@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 451710}
   - component: {fileID: 3394940}
   - component: {fileID: 2395908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolBandit_Slide_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 487798}
   - component: {fileID: 3336518}
   - component: {fileID: 2358920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolBandit_Trigger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 452162}
   - component: {fileID: 3332820}
   - component: {fileID: 2368768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolBandit_Mag_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,9 +262,9 @@ GameObject:
   - component: {fileID: 2392904}
   - component: {fileID: 4597316825774034016}
   - component: {fileID: 3990404448899235852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SM_Wep_PistolBandit_01
-  m_TagString: Pistol
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

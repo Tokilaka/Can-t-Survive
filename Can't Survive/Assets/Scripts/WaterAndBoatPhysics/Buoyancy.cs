@@ -29,7 +29,7 @@ public class Buoyancy : MonoBehaviour
             float diff = Floaters[i].position.y - waterManager.WaterAtHeightPosition(Floaters[i].position);
             if (diff < 0)
             {
-                Rb.AddForceAtPosition(Vector3.up * FloatingPower * Mathf.Abs(diff), Floaters[i].position, ForceMode.Force);
+                Rb.AddForceAtPosition(FloatingPower * Mathf.Abs(diff) * Vector3.up, Floaters[i].position, ForceMode.Force);
                 FloatersUnderWater += 1;
                 if (!Underwater)
                 {
