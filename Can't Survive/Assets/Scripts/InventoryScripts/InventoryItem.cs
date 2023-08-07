@@ -21,7 +21,6 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
         image.sprite = newItem.image;
         RefreshCount();
     }
-
     public void RefreshCount()
     {
         countText.text = count.ToString();
@@ -48,4 +47,5 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
         transform.SetParent(ParentAfterDrag);
         InventoryManager.Instance.ChangeItem();
     }
+
 }

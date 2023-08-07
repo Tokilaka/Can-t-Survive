@@ -1,14 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEditor.Progress;
+using Newtonsoft.Json;
+using static UnityEngine.InputManagerEntry;
 
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] GameObject hand;
     [SerializeField] Animator animator;
+    public int stack = 16;
     public static InventoryManager Instance;
 
     public InventorySlot[] inventorySlots;
@@ -16,7 +23,6 @@ public class InventoryManager : MonoBehaviour
 
     int selectedSlot = -1;
     PlayerMovement player;
-
     private void Awake()
     {
         Instance = this;
@@ -45,7 +51,7 @@ public class InventoryManager : MonoBehaviour
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < 16 && itemInSlot.item.stackable == true)
+            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < stack && itemInSlot.item.stackable == true)
             {
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
@@ -161,12 +167,12 @@ public class InventoryManager : MonoBehaviour
             //change slots with mouse scroll
             if (Input.GetAxisRaw("Mouse ScrollWheel") < 0) // to right
             {
-                ChangeSlot(selectedSlot + 1);
-                if (selectedSlot >= 8)
+                if (selectedSlot >= 7)
                 {
-                    selectedSlot = 0;
-                    ChangeSlot(selectedSlot);
+                    selectedSlot = -1;
+                    inventorySlots[7].DeSelect();
                 }
+                ChangeSlot(selectedSlot + 1);
             }
             if (Input.GetAxisRaw("Mouse ScrollWheel") > 0) // to left
             {
@@ -223,6 +229,65 @@ public class InventoryManager : MonoBehaviour
                 animator.SetBool("hasRifle", true);
                 animator.SetBool("hasPistol", false);
                 break;
+        }
+    }
+    public ItemsDatabase itemDatabase;
+    public void SaveInventory()
+    {
+        InventoryData inventoryData = new InventoryData();
+
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            InventorySlot slot = inventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot != null)
+            {
+                inventoryData.count[i] = itemInSlot.count;
+                inventoryData.id[i] = itemInSlot.item.id;
+            }
+        }
+        string json = JsonConvert.SerializeObject(inventoryData, Formatting.Indented, new JsonSerializerSettings
+        {
+            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+        });
+        File.WriteAllText(Application.persistentDataPath + "/inventory.json", json);
+    }
+
+    // Method to load the inventory data from a JSON file
+    public void LoadInventory()
+    {
+        string path = Application.persistentDataPath + "/inventory.json";
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            InventoryData inventoryData = JsonConvert.DeserializeObject<InventoryData>(json);
+            for (int i = 0; i < inventoryData.id.Length; i++)
+            {
+                for (int j = 0; j < itemDatabase.items.Length; j++)
+                {
+                    if (inventoryData.id[i] == itemDatabase.items[j].id)
+                    {
+                        Item item = itemDatabase.items[j];
+
+                        for (int l = 0; l < inventoryData.count[i]; l++)
+                        {
+                            InventorySlot slot = inventorySlots[i];
+                            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < stack && itemInSlot.item.stackable == true)
+                            {
+                                itemInSlot.count++;
+                                itemInSlot.RefreshCount();
+                            }
+                            else if (itemInSlot == null)
+                            {
+                                SpawnItem(item, slot);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

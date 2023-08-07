@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0482fa5fac144408f62fa0609fae12, type: 3}
   m_Name: Pistol_Swat
   m_EditorClassIdentifier: 
+  id: gun_pistol
   image: {fileID: 21300000, guid: a23b99ed5b7cd8647bdbc04d3b29720c, type: 3}
   type: 2
   actionType: 0

@@ -45,4 +45,14 @@ public class DemoScript : MonoBehaviour
             //not used item
         }
     }
+
+    public void SaveInventory()
+    {
+        inventoryManager.SaveInventory();
+    }
+
+    public void LoadInventory()
+    {
+        inventoryManager.LoadInventory();
+    }
 }
