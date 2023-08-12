@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] float walkSpeed;
     [SerializeField] float runSpeed;
+    [SerializeField] float shootSpeed;
     [SerializeField] float rotationSpeed;
     [SerializeField] float jumpForce;
     [SerializeField] float groundDrag = 5f;
@@ -83,6 +84,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(runKey)) speed = runSpeed;
         else speed = walkSpeed;
+
+        Item recivedItem = InventoryManager.Instance.GetSelectedItem(false);
+        if (recivedItem != null)
+        {
+            if (Input.GetKey(KeyCode.Mouse0) && recivedItem.type == ItemType.Gun) speed = shootSpeed;
+        }
     }
 
     //debuger for ground check

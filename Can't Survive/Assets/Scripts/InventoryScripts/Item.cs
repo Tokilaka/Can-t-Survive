@@ -17,7 +17,7 @@ public class Item : ScriptableObject
 public enum ItemType
 {
     Tool,
-    Food,
+    Default,
     Gun
 }
 

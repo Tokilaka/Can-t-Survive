@@ -3815,13 +3815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfb82739f325594894baf637aa46816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   accAndDec: 3
---- !u!95 &791916942 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9512288, guid: e66a409f40d08fa448d220bef83f0194,
-    type: 3}
-  m_PrefabInstance: {fileID: 1678870785}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &804306344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5426,8 +5421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671d761739b813a4ab40e7ef0d48e7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
+  walkSpeed: 2.2
   runSpeed: 5
+  shootSpeed: 1.2
   rotationSpeed: 6
   jumpForce: 6
   groundDrag: 5
@@ -6386,7 +6382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 233598839}
-  animator: {fileID: 791916942}
+  animator: {fileID: 791916941}
   stack: 16
   inventorySlots:
   - {fileID: 4860670001796453678}

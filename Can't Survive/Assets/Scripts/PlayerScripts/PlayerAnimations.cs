@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    Animator animator;
     PlayerMovement player;
+    [HideInInspector] public Animator animator;
     float velocity = 0.0f;
     [SerializeField] float accAndDec = 2f;
     void Start()
@@ -18,6 +18,7 @@ public class PlayerAnimations : MonoBehaviour
         bool moving = Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
         bool running = Input.GetKey(player.runKey);
         bool jump = Input.GetKeyDown(player.jumpKey);
+        bool shooting = Input.GetKey(KeyCode.Mouse0);
         bool grounded = player.IsGrounded();
 
         //running
@@ -42,9 +43,37 @@ public class PlayerAnimations : MonoBehaviour
         {
             animator.SetTrigger("Jump");
         }
+        //shoot
+        if (shooting && grounded) animator.SetBool("shooting", true);
+        else animator.SetBool("shooting", false);
+
 
         velocity = Mathf.Clamp(velocity, 0f, 1f);
 
         animator.SetFloat("Default", velocity);
+    }
+
+    public void ChangeAnimation(Item recivedItem)
+    {
+        switch (recivedItem.animState)
+        {
+            case AnimState.Default:
+                animator.SetBool("hasRifle", false);
+                animator.SetBool("hasPistol", false);
+                break;
+            case AnimState.Pistol:
+                animator.SetBool("hasPistol", true);
+                animator.SetBool("hasRifle", false);
+                break;
+            case AnimState.Rifle:
+                animator.SetBool("hasRifle", true);
+                animator.SetBool("hasPistol", false);
+                break;
+            default:
+                animator.SetBool("hasRifle", false);
+                animator.SetBool("hasPistol", false);
+                break;
+
+        }
     }
 }

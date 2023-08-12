@@ -14,7 +14,7 @@ using static UnityEngine.InputManagerEntry;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] GameObject hand;
-    [SerializeField] Animator animator;
+    [SerializeField] PlayerAnimations animator;
     public int stack = 16;
     public static InventoryManager Instance;
 
@@ -143,12 +143,12 @@ public class InventoryManager : MonoBehaviour
             itemInHand.GetComponent<Collider>().enabled = false;
             itemInHand.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
 
-            ChangeAnimation(recivedItem);
+            animator.ChangeAnimation(recivedItem);
         }
         else
         {
-            animator.SetBool("hasRifle", false);
-            animator.SetBool("hasPistol", false);
+            animator.animator.SetBool("hasRifle", false);
+            animator.animator.SetBool("hasPistol", false);
         }
     }
 
@@ -202,33 +202,14 @@ public class InventoryManager : MonoBehaviour
                 InventoryItem itemInSlot = inventorySlots[selectedSlot].GetComponentInChildren<InventoryItem>();
                 if (itemInSlot.count <= 0)
                 {
-                    animator.SetBool("hasRifle", false);
-                    animator.SetBool("hasPistol", false);
+                    animator.animator.SetBool("hasRifle", false);
+                    animator.animator.SetBool("hasPistol", false);
                 }
                 else
                 {
                     ChangeItem();
                 }
             }
-        }
-    }
-
-    void ChangeAnimation(Item recivedItem)
-    {
-        switch (recivedItem.animState)
-        {
-            case AnimState.Default:
-                animator.SetBool("hasRifle", false);
-                animator.SetBool("hasPistol", false);
-                break;
-            case AnimState.Pistol:
-                animator.SetBool("hasPistol", true);
-                animator.SetBool("hasRifle", false);
-                break;
-            case AnimState.Rifle:
-                animator.SetBool("hasRifle", true);
-                animator.SetBool("hasPistol", false);
-                break;
         }
     }
     public ItemsDatabase itemDatabase;
@@ -288,6 +269,7 @@ public class InventoryManager : MonoBehaviour
 
                 }
             }
+            ChangeItem();
         }
     }
 }
