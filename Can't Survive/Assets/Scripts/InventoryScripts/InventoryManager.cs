@@ -1,15 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using static UnityEditor.Progress;
 using Newtonsoft.Json;
-using static UnityEngine.InputManagerEntry;
 
 public class InventoryManager : MonoBehaviour
 {

@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
-
 public class WaterManager : MonoBehaviour
 {
     [SerializeField] float waveFrequency = 1f;

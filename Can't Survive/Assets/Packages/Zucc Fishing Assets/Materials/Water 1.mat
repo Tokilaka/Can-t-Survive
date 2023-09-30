@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: 4223adfc197c782479e14fff53d5830d,
+  m_Name: Water 1
+  m_Shader: {fileID: -6465566751694194690, guid: 4565a984aa12cc24182cc32e6ce6c7a6,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -70,7 +70,7 @@ Material:
     - _Foam_Scale: 50
     - _Foam_Strength: 0.0025
     - _Foam_Width: 1
-    - _Metallic: 0.02
+    - _Metallic: 0
     - _Normal_Strength: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
